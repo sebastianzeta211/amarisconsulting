@@ -1,0 +1,54 @@
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+  
+<form [formGroup]="checkoutForm" (ngSubmit)="agregarReserva()">
+  <div class="form-group">
+   
+    <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese email">
+    </div>
+
+  <div class="form-group">
+    <input id="nombre" formControlName="nombre"  type="text" class="form-control" placeholder="Nombre completo">
+  </div>
+
+  <div class="form-group">
+    <input id="identificacion" formControlName="identificacion"  type="text" class="form-control" placeholder="Identificación">
+  </div>
+
+  <div class="form-group">  
+
+    <select formControlName="sede" id="sede" class="form-select" aria-label="Default select example">
+      <option *ngFor="let item of listarSede" [value]="item.id">{{ item.nombre }}</option>
+    </select>
+
+</div>
+  <div class="form-group">
+  
+
+
+    <div class="container mt-5">
+     
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input formControlName="fecha" class="form-control" type="date" id="fecha" name="fecha">
+        </div>
+        <div class="form-group">
+          <label for="hora">Hora:</label>
+          <input formControlName="hora" class="form-control" type="time" id="hora" name="hora">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+     
+    </div>
+
+
+
+    
+</div>
+
+
+</form>

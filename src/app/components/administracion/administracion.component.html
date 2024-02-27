@@ -1,0 +1,43 @@
+
+<div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+            <tr>
+              <th>email</th>
+              <th>nombre</th>
+              <th>cc</th>
+              <th>campus</th>
+              <th>fecha</th>
+              <th>Acciones</th>
+            </tr>
+      </thead>
+      <tbody>
+       
+        <tr *ngFor="let user of listarReserva;let i =index">     
+              <td>{{user.email}}</td>
+              <td>{{user.nombre}}</td>
+              <td>{{user.identificacion}}</td>
+              <td>{{user.campus}}</td>
+              <td>{{user.fecha}}</td>
+    
+              
+              <td><i (click)="eliminar(user.id)" class="fa-solid fa-delete-left" ></i></td>
+    
+    
+            </tr>
+            
+      </tbody>
+    </table>
+    </div>
+      
+              <div>
+      
+            <div>
+      
+          <div>
+      
+        <div>
+      <div>
+    
+    
+    
